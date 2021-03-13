@@ -9,8 +9,8 @@ class StringCalculatorTest {
 
 @Test
     public void Add() {
-    //Adding tests of  1 and then 2 numbers since
-    //addition of 0 numbers is caught by try and catch block
+    //Adding tests of 0,  1 and then 2 numbers since
+    assertEquals(0, StringCalculator.Add(""));
     assertEquals(5, StringCalculator.Add("5"));
     assertEquals(7, StringCalculator.Add("2,5"));
     assertEquals(17, StringCalculator.Add("2,4,6,5"));
@@ -21,5 +21,10 @@ class StringCalculatorTest {
     //Program throws exception and lists the negative number and only adds the positive numbers
     assertEquals(1, StringCalculator.Add("//;\\n1;-2"));
 
+    //For testing the GetCalledCount method (FAILING TEST)
+    //assertEquals(3, StringCalculator.GetCalledCount());
+
+    //For testing the GetCalledCount method (PASSING TEST)
+    assertEquals(8, StringCalculator.GetCalledCount());
     }
 }

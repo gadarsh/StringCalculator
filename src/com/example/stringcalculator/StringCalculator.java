@@ -3,11 +3,15 @@
 package com.example.stringcalculator;
 
 public class StringCalculator{
+        //To count how many times add is called
+        private static int counter = 0;
         //Method created Add
-        public static int Add (String num){
+        public static int Add (String numbers){
+
             int sum = 0;
             //Replacing all the non-digits with "no space"
-            String a = num.replaceAll("[^-0-9]", "");
+            String a = numbers.replaceAll("[^-0-9]", "");
+            counter ++;
 
             for(int i=0; i<=a.length()-1; i++) {
                 //Extracting and checking for negative numbers
@@ -20,18 +24,22 @@ public class StringCalculator{
                     //Adding the positive numbers
                     sum = sum + Character.getNumericValue(a.charAt(i));
                 }
+
             }
             return sum;
         }
+
+        public static int GetCalledCount(){
+            return counter;
+        }
         public static void main(String[] args){
-            String v= "//;\n1;-2,-4,5,-8";
-            //Adding try and catch block to catch "empty string" (error handling)
-            try{
-                    int a = Add(v);
-                    System.out.println(a);
-                }catch(Exception e){
-               System.out.println("0");
-            }
+            String v= "1\n2,3";
+            int addtotal = Add(v);
+            System.out.println("The sum of numbers is: " + addtotal);
+
+            int count = 0;
+            count = GetCalledCount();
+            System.out.print("Method called " + count + " times");
         }
     }
 
