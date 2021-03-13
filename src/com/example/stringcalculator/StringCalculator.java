@@ -13,15 +13,17 @@ public class StringCalculator{
             //Extracting split array
 
 
-            for (String s : arr) {
+            if (arr.length < 3) {
+                for (String s : arr) {
                 ///calculating sum and convert string to int
                 sum = Integer.parseInt(s) + sum;
+                }
             }
 
             return sum;
         }
         public static void main(String[] args){
-            String v= "2,7";
+            String v= "2,7,8";
             //Adding try and catch block to catch "empty string" (error handling)
             try{
                     int a = Add(v);
