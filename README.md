@@ -1,5 +1,5 @@
 # StringCalculator
-## Consists of: StringCalculator.java & StringCalculator.Test
+## Consists of: StringCalculator.java & StringCalculatorTest.java
 The StringCalculator.java program removes delimiters and adds positive numbers; throws exceptions for negative numbers and lists them.
 
 
