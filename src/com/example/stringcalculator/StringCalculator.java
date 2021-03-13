@@ -9,19 +9,19 @@ public class StringCalculator{
             int sum = 0;
 
             //Adding delimiter using split
-            String arr[]= num.split(",|\\n");
+            String[] arr= num.split(",");
             //Extracting split array
 
 
-                for (int i = 0; i < arr.length; i++) {
-                    ///calculating sum and convert string to int
-                    sum = Integer.parseInt(arr[i]) + sum;
-                }
+            for (String s : arr) {
+                ///calculating sum and convert string to int
+                sum = Integer.parseInt(s) + sum;
+            }
 
             return sum;
         }
-        public static void main(String args[]){
-            String v= "2,4\n5,7";
+        public static void main(String[] args){
+            String v= "2,7";
             //Adding try and catch block to catch "empty string" (error handling)
             try{
                     int a = Add(v);
