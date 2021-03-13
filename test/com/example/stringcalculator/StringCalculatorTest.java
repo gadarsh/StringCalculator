@@ -13,6 +13,7 @@ class StringCalculatorTest {
     //addition of 0 numbers is caught by try and catch block
     assertEquals(5, StringCalculator.Add("5"));
     assertEquals(7, StringCalculator.Add("2,5"));
+    assertEquals(17, StringCalculator.Add("2,4,6,5"));
 
     }
 }
