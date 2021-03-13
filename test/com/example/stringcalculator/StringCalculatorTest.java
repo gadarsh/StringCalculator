@@ -16,6 +16,8 @@ class StringCalculatorTest {
     assertEquals(17, StringCalculator.Add("2,4,6,5"));
     assertEquals(17, StringCalculator.Add("2,4\n6,5"));
     assertEquals(3, StringCalculator.Add("//;\\n1;2"));
+    //Program returns 0 for negative numbers in the string
+    assertEquals(0, StringCalculator.Add("//;\\n1;-2"));
 
     }
 }
